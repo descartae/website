@@ -1,0 +1,39 @@
+.space-top {
+    margin-top: 100px;
+}
+.bg-intro {        
+  background: url("../img/bg-intro/image@2x.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.O-jeito-fcil-e-prt {  
+  width: 400px;
+  text-shadow: 0 0.5px 10px rgba(0, 0, 0, 0.2);  
+  line-height: 1.63;
+  font-size: 32px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-family: 'Signika', sans-serif;
+  font-weight: 600;
+}
+.Encontre-os-pontos-d {    
+  width: 400px;
+  font-family: 'Signika', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.63;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ffffff;
+  text-shadow: 0 0.5px 10px rgba(0, 0, 0, 0.2);
+}
+.ss-image {    
+    width: 304px;        
+    object-fit: contain;
+}
+.ss-image img {
+    height: auto;
+}
