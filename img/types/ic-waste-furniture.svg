@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+    <defs>
+        <linearGradient id="c" x1="3.009%" x2="99.157%" y1="3.009%" y2="99.157%">
+            <stop offset="0%" stop-color="#7C7C7C"/>
+            <stop offset="100%"/>
+        </linearGradient>
+        <path id="b" d="M17.014 8h45.972A9.014 9.014 0 0 1 72 17.014v45.972A9.014 9.014 0 0 1 62.986 72H17.014A9.014 9.014 0 0 1 8 62.986V17.014A9.014 9.014 0 0 1 17.014 8z"/>
+        <filter id="a" width="206.2%" height="206.2%" x="-53.1%" y="-40.6%" filterUnits="objectBoundingBox">
+            <feOffset dy="8" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="10"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+        </filter>
+        <path id="e" d="M57.127 33.606l-13.094-6.214-.022-.012-20.63 3.518h-.053v.008h-.004.004v1.252l1.074.654.424 12.286v.037l1.056.63.08.047 2.068-.44-.343-9.36 6.342 3.791.151 11.934v.036l1.136.79.076.057 2.327-.413V40.128l4.17-.802v2.315l1.062.557.084.04 1.925-.337v-3.165l7.38-1.42-.28 10.39-.005.04 1.284.706.084.044 1.97-.421.415-12.973 1.314-.257V33.61h-.026z"/>
+        <filter id="d" width="191.7%" height="222.8%" x="-45.9%" y="-57.4%" filterUnits="objectBoundingBox">
+            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="url(#c)" xlink:href="#b"/>
+        </g>
+        <g fill-rule="nonzero">
+            <use fill="#000" filter="url(#d)" xlink:href="#e"/>
+            <use fill="#FFF" fill-rule="evenodd" xlink:href="#e"/>
+        </g>
+    </g>
+</svg>
