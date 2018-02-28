@@ -39,6 +39,10 @@ p {
 .space-top {
   margin-top: 100px;
 }
+.bg-intro a {
+    text-align: center;
+    margin: auto;
+}
 .bg-intro {        
   background: url("../img/bg-intro/image@2x.png");
   background-position: bottom;
