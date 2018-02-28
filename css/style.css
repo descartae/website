@@ -39,18 +39,19 @@ p {
 .space-top {
   margin-top: 100px;
 }
-.bg-intro a {
-    text-align: center;
-    margin: auto;
-}
-.bg-intro {        
+
+.bg-intro {
   background: url("../img/bg-intro/image@2x.png");
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;  
+}
+.bg-intro a {
+  text-align: center;
+  margin: auto;
 }
 .O-jeito-fcil-e-prt {  
-  width: 400px;
+  max-width: 400px;
   text-shadow: 0 0.5px 10px rgba(0, 0, 0, 0.2);  
   line-height: 1.63;
   font-size: 32px;
@@ -59,7 +60,7 @@ p {
   font-weight: 600;
 }
 .Encontre-os-pontos-d {    
-  width: 400px;  
+  max-width: 400px;  
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -70,12 +71,16 @@ p {
   color: #ffffff;
   text-shadow: 0 0.5px 10px rgba(0, 0, 0, 0.2);
 }
-.ss-image {    
-    width: 304px;        
-    object-fit: contain;
+.ss-image {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
 }
 .ss-image img {
-    height: auto;
+  object-fit: contain;
+  max-width:100%;
+  max-height:100%;  
+  margin-top: 10px;
 }
 .types {    
   padding-top: 63px;
@@ -85,6 +90,8 @@ p {
   text-align: center;
 }
 .types-title {  
+  padding-left: 30px;
+  padding-right: 30px;
   margin: auto;  
   font-size: 21px;
   font-weight: normal;
@@ -107,12 +114,46 @@ p {
   text-align: center;
   color: #1b4855;
 }
+@media (min-width: 770px) {
+  .why {
+    display: block;
+  }
+  .project {
+    display: block;
+  }
+  .foot {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+}
+@media (max-width: 770px) {
+  .why {
+    display: none;
+  }
+  .foot {
+    display: none;
+  }
+  .project {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
 .why {    
+  padding-left: 40px;
+  padding-right: 40px;
   padding-top: 63px;
   padding-bottom: 63px;
   background-color: #f6f6f6;
   margin: auto;   
   text-align: center;
+}
+.why img {
+  width: 100%;
+  height: 100%;
 }
 .why-title, .project-title {  
   font-size: 24px;
@@ -124,7 +165,13 @@ p {
   text-align: left;
   color: #5dc91a;
 }
+.project #map {
+    width: 100%;
+    height: 100%;
+}
 .project {    
+  padding-left: 40px;
+  padding-right: 40px;
   padding-top: 63px;
   padding-bottom: 63px;
   background-color: #ffffff;
@@ -140,6 +187,10 @@ p {
   letter-spacing: normal;
   text-align: left;
   color: #5dc91a;
+}
+.foot {
+  padding-left: 40px;
+  padding-right: 40px;
 }
 .bg-foot {        
   padding-top: 63px;  
@@ -169,6 +220,7 @@ p {
   color: #5dc91a;
 }
 .input {
+  padding-left: 10px;
   width: 100%;
   height: 40px;
   border-radius: 2.5px;
