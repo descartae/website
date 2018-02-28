@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+    <defs>
+        <radialGradient id="c" cx="0%" cy="0%" r="141.421%" fx="0%" fy="0%">
+            <stop offset="0%" stop-color="#85CFF4"/>
+            <stop offset="100%" stop-color="#2276E7"/>
+        </radialGradient>
+        <path id="b" d="M16.014 8h45.972A9.014 9.014 0 0 1 71 17.014v45.972A9.014 9.014 0 0 1 61.986 72H16.014A9.014 9.014 0 0 1 7 62.986V17.014A9.014 9.014 0 0 1 16.014 8z"/>
+        <filter id="a" width="153.1%" height="153.1%" x="-26.6%" y="-20.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+        </filter>
+        <filter id="d" width="186.1%" height="214.8%" x="-43.1%" y="-53.7%" filterUnits="objectBoundingBox">
+            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="url(#c)" xlink:href="#b"/>
+        </g>
+        <g fill="#FFF" fill-rule="nonzero" filter="url(#d)" transform="translate(21.423 28.282)">
+            <path d="M3.906 9.958v10.955l13.02 5.228V3.722l-3.075 8.235z"/>
+            <path d="M3.906 0L0 7.842l3.906.784 9.114 1.83L16.882.12 16.84 0zM18.228 3.722v22.419l13.02-5.228V9.958l-9.944 1.999z"/>
+            <path d="M31.249 0H18.228l.045.119 3.862 10.337 9.114-1.83 3.906-.784z"/>
+        </g>
+    </g>
+</svg>

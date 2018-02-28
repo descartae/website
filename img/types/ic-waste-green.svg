@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+    <defs>
+        <linearGradient id="c" x1="0%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#88DE0E"/>
+            <stop offset="100%" stop-color="#13A42F"/>
+        </linearGradient>
+        <path id="b" d="M9.014 0h45.972A9.014 9.014 0 0 1 64 9.014v45.972A9.014 9.014 0 0 1 54.986 64H9.014A9.014 9.014 0 0 1 0 54.986V9.014A9.014 9.014 0 0 1 9.014 0z"/>
+        <filter id="a" width="153.1%" height="153.1%" x="-26.6%" y="-20.3%" filterUnits="objectBoundingBox">
+            <feOffset dy="4" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+        </filter>
+        <path id="e" d="M19.138 43.956c-.6-.588-1.08-1.059-1.56-1.647 1.08 0 2.28-.118 3.241-.353.84-.235 1.921-.706 2.762-1.295l.24-.117-.12-.236c-3.242-6-2.882-11.65 2.16-16.474 4.203-4.118 14.529-5.295 21.012-3.883l-2.401 12.473c-1.08 7.296-7.204 15.18-17.53 11.062C33.307 38.543 40.63 29.953 40.63 26.54l-.96 1.294c-3.362 5.06-14.528 16.239-20.532 16.121z"/>
+        <filter id="d" width="205.8%" height="222.8%" x="-52.9%" y="-57.4%" filterUnits="objectBoundingBox">
+            <feOffset dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="5"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(8 8)">
+            <use fill="#000" filter="url(#a)" xlink:href="#b"/>
+            <use fill="url(#c)" xlink:href="#b"/>
+        </g>
+        <g transform="translate(8 8)">
+            <use fill="#000" filter="url(#d)" xlink:href="#e"/>
+            <use fill="#FFF" xlink:href="#e"/>
+        </g>
+    </g>
+</svg>
