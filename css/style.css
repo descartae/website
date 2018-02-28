@@ -1,7 +1,6 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
 body {
-    font-family: 'Signika', sans-serif;
+    font-family: 'Signika', sans-serif;    
 }
 p {
     font-family: 'Signika', sans-serif;
