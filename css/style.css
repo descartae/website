@@ -3,6 +3,14 @@ body {
 }
 p {
     font-family: 'Signika', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #074b57;
 }
 
 @media (min-width: 771px) {
@@ -92,4 +100,21 @@ p {
   letter-spacing: 0px;
   text-align: center;
   color: #1b4855;
+}
+.why {    
+  padding-top: 63px;
+  padding-bottom: 63px;
+  background-color: #f6f6f6;
+  margin: auto;   
+  text-align: center;
+}
+.why-title {  
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5dc91a;
 }
