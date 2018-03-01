@@ -45,18 +45,31 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
 </head>
 <body>
     
-    
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '174765156645849',
+          xfbml      : true,
+          version    : 'v2.12'
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div class="bg-intro">
         <nav id="nav" class="navbar navbar-expand-lg navbar-dark p-4" style="background-color: #00000000">
             <div class="navbar-brand collapse">
                 <img src="./img/logo/image@2x.png" alt="">
             </div>
-            <div class="mx-auto"></div>            
-            <div class="ml-auto">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+            <div class="mx-auto"></div>                        
             <div class="navbar-collapse collapse" id="navbarNavAltMarkup">    
                 <div class="navbar-nav ml-auto">                    
                     <a class="nav-item nav-link active" href="#why">Porquê?</a>
@@ -70,7 +83,7 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
                 <div class="col">                    
                     <p class="O-jeito-fcil-e-prt">O jeito fácil e prático de descartar seus resíduos</p>
                     <p class="Encontre-os-pontos-d">
-                     Encontre os pontos de coleta mais próximos de você e descubra informações detalhes sobre quais resídos são aceitos e como chegar em cada ponto.
+                     Encontre os pontos de coleta mais próximos de você e descubra informações e detalhes sobre quais resídos são aceitos e como chegar em cada ponto.
                     </p>                    
                     <div class="row">  
                         <div class="col">
@@ -191,7 +204,12 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
                         </p>
                     </div>                      
                     <div class="col">
-                        <img src="./img/why/image@2x.png" alt="São gerados 230k toneladas de lixo por dia no Brasil" />
+                        <div class="row">
+                            <img src="./img/why/image@3x.png" alt="São gerados 230k toneladas de lixo por dia no Brasil" />                
+                        </div>
+                        <div class="row">
+                            <a href="http://www.pensamentoverde.com.br/" target="_blank" class="ml-5">Fonte: Pensamento verde</a>                
+                        </div>
                     </div>
                 </div>
             </div>
@@ -204,9 +222,12 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
                     </p>                           
                 </div>
                 <div class="row mt-2">
-                    <img src="./img/why/image@2x.png" alt="São gerados 230k toneladas de lixo por dia no Brasil" />
+                    <img src="./img/why/image@3x.png" alt="São gerados 230k toneladas de lixo por dia no Brasil" />
                 </div>
-                <div class="row mt-5">                
+                <div class="row ml-3">
+                    <a href="http://www.pensamentoverde.com.br/" target="_blank">Fonte: Pensamento verde</a>
+                </div>
+                <div class="row mt-4">                
                     <p>
                         O mundo esta cada vez mais perto de chegar no limte de fornecimento de recursos naturais para produção de novos produtos.
                     </p>
@@ -296,40 +317,40 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
     <div class="bg-foot" id="contact">        
         <div class="container foot">   
             <div class="row">
-                <div class="col">
-                    <div class="row">
+                <div class="col">                    
                         <p class="foot-title">
                             Contato
                         </p>
-                    </div>
-                    <div class="row">
+                    
                         <p class="foot-desc">
                             Deixe um mensagem com sua dúvida, sugestão ou informando que você quer participar do projeto. Nós estamos esperando ansiosos 😍
                         </p>
-                    </div>
-                    <div class="row">
+                    
                         <div class="input">
                             <input type="text" id="contact-name" placeholder="Nome" />                    
                         </div>
-                    </div>
-                    <div class="row">
+                    
                         <div class="input mt-4">
                             <input type="email" id="contact-email" placeholder="E-mail" />                    
                         </div>
-                    </div>
-                    <div class="row">
+                    
                         <div class="input mt-4">
                             <input type="text" id="contact-subject" placeholder="Asunto" />                    
                         </div>
-                    </div>
-                    <div class="row">
+                    
                         <div class="input mt-4" id="message">
                             <textarea id="contact-message" placeholder="Mensagem"></textarea>
                         </div>
-                    </div>
-                    <div class="row">
+                    
                         <button class="btn-send mt-4" onclick="joiningTheCause(this)" type="button">Enviar mensagem</button>
-                    </div>
+                    
+                </div>
+                <div class="break-770"></div>
+                <div class="col">      
+                    <p class="foot-title">
+                        Redes sociais
+                    </p>         
+                    <div class="fb-page" data-href="https://www.facebook.com/descartaeapp/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/descartaeapp/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/descartaeapp/">Descartaê</a></blockquote></div>
                 </div>
             </div>
         </div>
@@ -368,6 +389,10 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
           setTimeout(function () {
             btn.innerHTML = "Avise-me";
           }, 2000);
+            
+          var params = {};
+          params['email'] = email;                      
+          FB.AppEvents.logEvent('WaitList', null, params);
         }
         
         function joiningTheCause(btn) {
@@ -400,7 +425,12 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
                 "Subject": subject,
                 "Message": message,
             });            
-            mixpanel.track("JoiningTheCause", {'subject': subject, 'message': message});                        
+            mixpanel.track("JoiningTheCause", {'subject': subject, 'message': message});  
+                        
+            var params = {};
+            params['email'] = email;
+            params['name'] = name;            
+            FB.AppEvents.logEvent('JoiningTheCause', null, params);
         }
         
         function validateEmail(email) {
