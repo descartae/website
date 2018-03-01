@@ -47,7 +47,7 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
     
     
     <div class="bg-intro">
-        <nav class="navbar navbar-expand-lg navbar-dark p-4" style="background-color: #00000000">
+        <nav id="nav" class="navbar navbar-expand-lg navbar-dark p-4" style="background-color: #00000000">
             <div class="navbar-brand collapse">
                 <img src="./img/logo/image@2x.png" alt="">
             </div>
@@ -79,7 +79,7 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
                     <div class="row">   
                         <div class="col-6">
                             <div class="row">   
-                                <a href="#" target="_blank">
+                                <a href="#" target="_blank" onclick="track('Download iOS')">
                                     <img src="./img/btn-applestore/image@2x.png"/>
                                 </a>
                             </div>                            
@@ -89,7 +89,7 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
                         </div>
                         <div class="col-6">
                             <div class="row">   
-                                <a href="#" target="_blank">
+                                <a href="https://play.google.com/store/apps/details?id=com.descartae" target="_blank" onclick="track('Download Android')">
                                     <img src="./img/btn-googleplay/image@2x.png" />
                                 </a>
                             </div>
