@@ -45,7 +45,25 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
 </head>
 <body>
     
-    
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '174765156645849',
+          xfbml      : true,
+          version    : 'v2.12'
+        });
+        FB.AppEvents.logPageView();
+      };
+
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
     <div class="bg-intro">
         <nav id="nav" class="navbar navbar-expand-lg navbar-dark p-4" style="background-color: #00000000">
             <div class="navbar-brand collapse">
@@ -299,40 +317,40 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
     <div class="bg-foot" id="contact">        
         <div class="container foot">   
             <div class="row">
-                <div class="col">
-                    <div class="row">
+                <div class="col">                    
                         <p class="foot-title">
                             Contato
                         </p>
-                    </div>
-                    <div class="row">
+                    
                         <p class="foot-desc">
                             Deixe um mensagem com sua dúvida, sugestão ou informando que você quer participar do projeto. Nós estamos esperando ansiosos 😍
                         </p>
-                    </div>
-                    <div class="row">
+                    
                         <div class="input">
                             <input type="text" id="contact-name" placeholder="Nome" />                    
                         </div>
-                    </div>
-                    <div class="row">
+                    
                         <div class="input mt-4">
                             <input type="email" id="contact-email" placeholder="E-mail" />                    
                         </div>
-                    </div>
-                    <div class="row">
+                    
                         <div class="input mt-4">
                             <input type="text" id="contact-subject" placeholder="Asunto" />                    
                         </div>
-                    </div>
-                    <div class="row">
+                    
                         <div class="input mt-4" id="message">
                             <textarea id="contact-message" placeholder="Mensagem"></textarea>
                         </div>
-                    </div>
-                    <div class="row">
+                    
                         <button class="btn-send mt-4" onclick="joiningTheCause(this)" type="button">Enviar mensagem</button>
-                    </div>
+                    
+                </div>
+                <div class="break-770"></div>
+                <div class="col">      
+                    <p class="foot-title">
+                        Redes sociais
+                    </p>         
+                    <div class="fb-page" data-href="https://www.facebook.com/descartaeapp/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/descartaeapp/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/descartaeapp/">Descartaê</a></blockquote></div>
                 </div>
             </div>
         </div>
