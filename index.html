@@ -37,32 +37,33 @@
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css?family=Signika:300,400,600,700" rel="stylesheet">
 
+    <!-- start Mixpanel --><script type="text/javascript">(function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
+    
 </head>
 <body>
     
     
     <div class="bg-intro">
-        <nav class="navbar navbar-expand-md navbar-dark p-4" style="background-color: #00000000">
-            <div class=" navbar-brand collapse">
+        <nav class="navbar navbar-expand-lg navbar-dark p-4" style="background-color: #00000000">
+            <div class="navbar-brand collapse">
                 <img src="./img/logo/image@2x.png" alt="">
             </div>
-            <div class="mx-auto"></div>
-            <div class="navbar-collapse collapse">    
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Porquê? <span class="sr-only">(atual)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Sobre</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-                </ul>
+            <div class="mx-auto"></div>            
+            <div class="ml-auto">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <div class="navbar-collapse collapse" id="navbarNavAltMarkup">    
+                <div class="navbar-nav ml-auto">                    
+                    <a class="nav-item nav-link active" href="#why">Porquê?</a>
+                    <a class="nav-item nav-link active" href="#project">Sobre</a>                    
+                    <a class="nav-item nav-link active" href="#contact">Contato</a>                    
+                </div>
+            </div>
         </nav>    
         <div class="container">            
             <div class="row align-items-center">
@@ -282,88 +283,48 @@
             </div>
         </div>
     </div>
-    <div class="bg-foot">
+    <div class="bg-foot" id="contact">        
         <div class="container foot">   
-            <div class="row">   
-                <div class="col align-items-center">          
+            <div class="row">
+                <div class="col">
                     <div class="row">
                         <p class="foot-title">
                             Contato
                         </p>
+                    </div>
+                    <div class="row">
                         <p class="foot-desc">
                             Deixe um mensagem com sua dúvida, sugestão ou informando que você quer participar do projeto. Nós estamos esperando ansiosos 😍
                         </p>
                     </div>
                     <div class="row">
-                        <div class="col input mr-2">
+                        <div class="input">
                             <input type="text" id="contact-name" placeholder="Nome" />                    
                         </div>
-                        <div class="col input ml-2">
+                    </div>
+                    <div class="row">
+                        <div class="input mt-4">
                             <input type="email" id="contact-email" placeholder="E-mail" />                    
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col input mt-4">
+                        <div class="input mt-4">
                             <input type="text" id="contact-subject" placeholder="Asunto" />                    
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col input mt-4" id="message">
-                            <input type="text" id="contact-message" placeholder="Mensagem" />                    
+                        <div class="input mt-4" id="message">
+                            <textarea id="contact-message" placeholder="Mensagem"></textarea>
                         </div>
                     </div>
                     <div class="row">
-                        <input class="btn-send mt-4" type="button" value="Enviar mensagem" />
+                        <button class="btn-send mt-4" onclick="joiningTheCause(this)" type="button">Enviar mensagem</button>
                     </div>
                 </div>
-                <div class="col">                    
-                    <p class="foot-title">
-                        Redes sociais 
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="container foot mobile">   
-            <div class="row">
-                <p class="foot-title">
-                    Contato
-                </p>
-                <p class="foot-desc">
-                    Deixe um mensagem com sua dúvida, sugestão ou informando que você quer participar do projeto. Nós estamos esperando ansiosos 😍
-                </p>
-            </div>
-            <div class="row">
-                <div class="input">
-                    <input type="text" id="contact-name" placeholder="Nome" />                    
-                </div>
-            </div>
-            <div class="row">
-                <div class="input mt-4">
-                    <input type="email" id="contact-email" placeholder="E-mail" />                    
-                </div>
-            </div>
-            <div class="row">
-                <div class="input mt-4">
-                    <input type="text" id="contact-subject" placeholder="Asunto" />                    
-                </div>
-            </div>
-            <div class="row">
-                <div class="input mt-4" id="message">
-                    <input type="text" id="contact-message" placeholder="Mensagem" />                    
-                </div>
-            </div>
-            <div class="row">
-                <input class="btn-send mt-4" type="button" value="Enviar mensagem" />
-            </div>
-            <div class="space-top"></div>
-            <div class="row">
-                <p class="foot-title">
-                    Redes sociais 
-                </p>
             </div>
         </div>
         <div class="container">  
-            <div class="row">
+            <div class="row mt-4">
                 <p class="foot-copy mx-auto mt-6 mb-6">©2018 Descartaê, All Rights Reserved</p>
             </div>
         </div>
@@ -371,5 +332,47 @@
 
     <script src="./index.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>    
+    
+    <script type="text/javascript">
+        mixpanel.track('Abriu Site', { 'page name' : document.title, 'url' : window.location.pathname });
+        
+        function track(key) {
+            mixpanel.track(key);
+        }
+        
+        function joiningTheCause(btn) {
+          var email = document.getElementById('contact-email').value;
+          if ( ! email || ! validateEmail(email)) {
+              document.getElementById("contact-email").style.borderColor = "red";
+              return;
+          }
+          document.getElementById("contact-email").style.borderColor = "#00000000";
+          var name = document.getElementById('contact-name').value;
+          var subject = document.getElementById('contact-subject').value;
+          var message = document.getElementById('contact-message').value;
+          document.getElementById('contact-email').value = '';
+          document.getElementById('contact-name').value = '';
+          document.getElementById('contact-subject').value = '';
+          document.getElementById('contact-message').value = '';
+          request(email, name, subject, message);
+          btn.innerHTML = "Pronto!";
+        }
+
+        function request(email, name, subject, message) {
+            mixpanel.identify(email);
+            mixpanel.people.set({
+                "$email": email,
+                "$name": name,
+                "Subject": subject,
+                "Message": message,
+            });            
+            mixpanel.track("JoiningTheCause", {'subject': subject, 'message': message});                        
+        }
+        
+        function validateEmail(email) {
+          var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(email);
+        }
+    </script>    
 </body>
 </html>
