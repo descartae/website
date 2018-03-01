@@ -170,6 +170,11 @@ p {
   margin: auto;   
   text-align: center;
 }
+.why a {
+    font-size: 12px;
+    text-align: left;
+    color: #074b57;
+}
 .why img {
   width: 100%;
   height: 100%;
