@@ -83,7 +83,7 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
                 <div class="col">                    
                     <p class="O-jeito-fcil-e-prt">O jeito fácil e prático de descartar seus resíduos</p>
                     <p class="Encontre-os-pontos-d">
-                     Encontre os pontos de coleta mais próximos de você e descubra informações detalhes sobre quais resídos são aceitos e como chegar em cada ponto.
+                     Encontre os pontos de coleta mais próximos de você e descubra informações e detalhes sobre quais resídos são aceitos e como chegar em cada ponto.
                     </p>                    
                     <div class="row">  
                         <div class="col">
@@ -205,7 +205,7 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
                     </div>                      
                     <div class="col">
                         <div class="row">
-                            <img src="./img/why/image@2x.png" alt="São gerados 230k toneladas de lixo por dia no Brasil" />                
+                            <img src="./img/why/image@3x.png" alt="São gerados 230k toneladas de lixo por dia no Brasil" />                
                         </div>
                         <div class="row">
                             <a href="http://www.pensamentoverde.com.br/" target="_blank" class="ml-5">Fonte: Pensamento verde</a>                
@@ -389,6 +389,10 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
           setTimeout(function () {
             btn.innerHTML = "Avise-me";
           }, 2000);
+            
+          var params = {};
+          params['email'] = email;                      
+          FB.AppEvents.logEvent('WaitList', null, params);
         }
         
         function joiningTheCause(btn) {
@@ -421,7 +425,12 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
                 "Subject": subject,
                 "Message": message,
             });            
-            mixpanel.track("JoiningTheCause", {'subject': subject, 'message': message});                        
+            mixpanel.track("JoiningTheCause", {'subject': subject, 'message': message});  
+                        
+            var params = {};
+            params['email'] = email;
+            params['name'] = name;            
+            FB.AppEvents.logEvent('JoiningTheCause', null, params);
         }
         
         function validateEmail(email) {
