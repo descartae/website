@@ -1,6 +1,8 @@
+
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 body {
-    font-family: 'Signika', sans-serif;    
+    font-family: 'Signika', sans-serif;
 }
 p {
     font-family: 'Signika', sans-serif;
@@ -15,7 +17,7 @@ p {
 }
 
 @media (min-width: 768px) {
-  .break-1250 {    
+  .break-1250 {
     width: 100%;
     height: 20px;
   }
@@ -36,7 +38,7 @@ p {
 .space-top {
   margin-top: 100px;
 }
-.btn-waitlist {  
+.btn-waitlist {
   padding-left: 20px;
   padding-right: 20px;
   height: 40px;
@@ -57,7 +59,7 @@ p {
   background: url("../img/bg-intro/image@2x.png");
   background-position: bottom;
   background-repeat: no-repeat;
-  background-size: cover;  
+  background-size: cover;
 }
 .text-center {
   text-align: center;
@@ -69,22 +71,22 @@ p {
 .bg-intro p {
   color: #ffffff;
 }
-.bg-intro .input {    
-    min-width: 200px;    
+.bg-intro .input {
+    min-width: 200px;
 }
-.bg-intro button {    
+.bg-intro button {
     width: 100px;
 }
-.O-jeito-fcil-e-prt {  
+.O-jeito-fcil-e-prt {
   max-width: 400px;
-  text-shadow: 0 0.5px 10px rgba(0, 0, 0, 0.2);  
+  text-shadow: 0 0.5px 10px rgba(0, 0, 0, 0.2);
   line-height: 1.63;
   font-size: 32px;
   letter-spacing: 0px;
-  color: #ffffff;  
+  color: #ffffff;
   font-weight: 600;
 }
-.Encontre-os-pontos-d {    
+.Encontre-os-pontos-d {
   max-width: 400px;
   font-size: 16px;
   font-weight: normal;
@@ -104,20 +106,20 @@ p {
 .ss-image img {
   object-fit: contain;
   max-width:100%;
-  max-height:100%;  
+  max-height:100%;
   margin-top: 10px;
 }
-.types {    
+.types {
   padding-top: 63px;
   padding-bottom: 63px;
   background-color: #f6f6f6;
-  margin: auto;   
+  margin: auto;
   text-align: center;
 }
-.types-title {  
+.types-title {
   padding-left: 30px;
   padding-right: 30px;
-  margin: auto;  
+  margin: auto;
   font-size: 21px;
   font-weight: normal;
   font-style: normal;
@@ -127,9 +129,9 @@ p {
   text-align: center;
   color: #1b4855;
 }
-.type-name {     
-  margin: auto;    
-  font-family: 'Signika', sans-serif;  
+.type-name {
+  margin: auto;
+  font-family: 'Signika', sans-serif;
   font-size: 13px;
   font-weight: normal;
   font-style: normal;
@@ -145,7 +147,7 @@ p {
   }
   .project {
     display: block;
-  }  
+  }
   .mobile {
     display: none;
   }
@@ -153,7 +155,7 @@ p {
 @media (max-width: 768px) {
   .why {
     display: none;
-  }  
+  }
   .project {
     display: none;
   }
@@ -161,20 +163,20 @@ p {
     display: block;
   }
 }
-.why {    
+.why {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 63px;
   padding-bottom: 63px;
   background-color: #f6f6f6;
-  margin: auto;   
+  margin: auto;
   text-align: center;
 }
 .why img {
   width: 100%;
   height: 100%;
 }
-.why-title, .project-title {  
+.why-title, .project-title {
   font-size: 24px;
   font-weight: 600;
   font-style: normal;
@@ -188,13 +190,13 @@ p {
     width: 100%;
     height: 100%;
 }
-.project {    
+.project {
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 63px;
   padding-bottom: 63px;
   background-color: #ffffff;
-  margin: auto;   
+  margin: auto;
   text-align: center;
 }
 .project-subtitle {
@@ -211,14 +213,14 @@ p {
   padding-left: 40px;
   padding-right: 40px;
 }
-.bg-foot {        
-  padding-top: 63px;  
+.bg-foot {
+  padding-top: 63px;
   background: url("../img/bg-footer.svg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.foot-desc {    
+.foot-desc {
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -266,7 +268,7 @@ p {
 #message {
     height: 120px;
 }
-.btn-send {  
+.btn-send {
   padding-left: 20px;
   padding-right: 20px;
   height: 40px;
@@ -283,7 +285,7 @@ p {
   color: #ffffff;
   background-image: linear-gradient(163deg, #7ccb0d, #13a42f);
 }
-.foot-copy {    
+.foot-copy {
   font-size: 14px;
   font-weight: normal;
   font-style: normal;

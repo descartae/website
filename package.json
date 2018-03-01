@@ -5,9 +5,16 @@
   "repository": "git@github.com:descartae/website.git",
   "author": "Herlon Aguiar <herlon214@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
   "dependencies": {
-    "bootstrap": "4.0.0",
+    "bootstrap": "4.0.0-beta.2",
     "jquery": "^3.3.1",
     "popper.js": "^1.12.9"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.6.2"
   }
 }
