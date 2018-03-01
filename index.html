@@ -351,7 +351,23 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
         }
         
         function waitlist(btn) {
+          var email = document.getElementById('waitlist-email').value;
+          if ( ! email || ! validateEmail(email)) {
+              document.getElementById("waitlist-email").style.borderColor = "red";
+              return;
+          }
+          document.getElementById("waitlist-email").style.borderColor = "#00000000";
+          mixpanel.identify(email);
+          mixpanel.people.set({
+            "$email": email                
+          }); 
+          mixpanel.track("WaitList");   
+          btn.innerHTML = "Pronto!";
+          document.getElementById('waitlist-email').value = '';
             
+          setTimeout(function () {
+            btn.innerHTML = "Avise-me";
+          }, 2000);
         }
         
         function joiningTheCause(btn) {
@@ -370,6 +386,10 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
           document.getElementById('contact-message').value = '';
           request(email, name, subject, message);
           btn.innerHTML = "Pronto!";
+            
+          setTimeout(function () {
+            btn.innerHTML = "Enviar mensagem";
+          }, 2000);
         }
 
         function request(email, name, subject, message) {
