@@ -8,7 +8,7 @@
     
   <title>Descartaê - Pontos de coleta mais próximo para descartar resíduos</title>
 
-  <!-- <link rel="shortcut icon" href="img/logos/logo.ico"> TODO: Fix this, ico not found -->
+  <link rel="shortcut icon" href="./img/favicon.ico">
 
   <!-- for Facebook -->
   <meta property="og:type" content="website">
@@ -67,32 +67,42 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
         </nav>    
         <div class="container">            
             <div class="row align-items-center">
-                <div class="col">
-                    <p class="O-jeito-fcil-e-prt">O jeito fácil e prático de 
-                        descartar seus resíduos</p>
+                <div class="col">                    
+                    <p class="O-jeito-fcil-e-prt">O jeito fácil e prático de descartar seus resíduos</p>
                     <p class="Encontre-os-pontos-d">
-                    Encontre os pontos de coleta mais próximos de você e descubra informações detalhes sobre quais resídos são aceitos e como chegar em cada ponto.
-                    </p>
+                     Encontre os pontos de coleta mais próximos de você e descubra informações detalhes sobre quais resídos são aceitos e como chegar em cada ponto.
+                    </p>                    
+                    <div class="row">  
+                        <div class="col">
+                            <div class="input">
+                                <input type="email" id="waitlist-email" placeholder="E-mail" />                                 
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button class="btn-waitlist" onclick="waitlist(this)" type="button">Avise-me</button>
+                        </div>    
+                    </div>                        
                 </div>          
                 <div class="break-770"></div>
-                <div class="col">  
-                    <div class="row">   
+                <div class="col">                                                                    
+                    <div class="row">                           
                         <div class="col-6">
-                            <div class="row">   
+                            <!--<div class="row">   
                                 <a href="#" target="_blank" onclick="track('Download iOS')">
                                     <img src="./img/btn-applestore/image@2x.png"/>
                                 </a>
-                            </div>                            
+                            </div>-->
                             <div class="row ss-image">                                       
                                 <img src="./img/ss-iphone/image@2x.png" />
                             </div>                            
                         </div>
                         <div class="col-6">
+                            <!--
                             <div class="row">   
                                 <a href="https://play.google.com/store/apps/details?id=com.descartae" target="_blank" onclick="track('Download Android')">
                                     <img src="./img/btn-googleplay/image@2x.png" />
                                 </a>
-                            </div>
+                            </div>-->
                             <div class="row ss-image">                                       
                                 <img src="./img/ss-android/image@2x.png" />
                             </div>
@@ -340,6 +350,26 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
             mixpanel.track(key);
         }
         
+        function waitlist(btn) {
+          var email = document.getElementById('waitlist-email').value;
+          if ( ! email || ! validateEmail(email)) {
+              document.getElementById("waitlist-email").style.borderColor = "red";
+              return;
+          }
+          document.getElementById("waitlist-email").style.borderColor = "#00000000";
+          mixpanel.identify(email);
+          mixpanel.people.set({
+            "$email": email                
+          }); 
+          mixpanel.track("WaitList");   
+          btn.innerHTML = "Pronto!";
+          document.getElementById('waitlist-email').value = '';
+            
+          setTimeout(function () {
+            btn.innerHTML = "Avise-me";
+          }, 2000);
+        }
+        
         function joiningTheCause(btn) {
           var email = document.getElementById('contact-email').value;
           if ( ! email || ! validateEmail(email)) {
@@ -356,6 +386,10 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script><!-- end Mixpanel -->
           document.getElementById('contact-message').value = '';
           request(email, name, subject, message);
           btn.innerHTML = "Pronto!";
+            
+          setTimeout(function () {
+            btn.innerHTML = "Enviar mensagem";
+          }, 2000);
         }
 
         function request(email, name, subject, message) {
