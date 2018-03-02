@@ -16,7 +16,7 @@ function loadFacilities(callback){
     } \
     ";
 
-    fetch('http://beta-api.descartae.com/graphql', {
+    fetch('https://beta-api.descartae.com/graphql', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
