@@ -259,6 +259,7 @@ p {
   background-color: #ffffff;
   border: 0;
   margin: auto;
+  border: 2px solid #00000000;
 }
 .input input {
   padding-left: 10px;
@@ -271,6 +272,7 @@ p {
   border-radius: 2.5px;
   background-color: #ffffff;
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
+  border: 2px solid #00000000;
 }
 #message {
     height: 120px;

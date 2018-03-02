@@ -359,7 +359,6 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script>
         </div>
     </div>
 
-    <script src="./index.js"></script>
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 
     <script type="text/javascript">
@@ -386,21 +385,26 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script>
             mixpanel.track(key);
         }
 
+        function field(form, field) {
+            return document.getElementById(form + '-' + field)
+        }
+
         function waitlist(btn) {
-            var email = document.getElementById('waitlist-email').value;
-            if ( ! email || ! validateEmail(email)) {
-                document.getElementById("waitlist-email").style.borderColor = "red";
+            var email = field('waitlist', 'email').value;
+            if (!email || !validateEmail(email)) {
+                field('waitlist', 'email').style.borderColor = "red";
                 return;
             }
-            document.getElementById("waitlist-email").style.borderColor = "#00000000";
+            field('waitlist', 'email').style.borderColor = "#00000000";
+            field('waitlist', 'email').value = '';
+
             mixpanel.identify(email);
             mixpanel.people.set({
                 "$email": email
             });
             mixpanel.track("WaitList");
-            btn.innerHTML = "Pronto!";
-            document.getElementById('waitlist-email').value = '';
 
+            btn.innerHTML = "Pronto!";
             setTimeout(function () {
                 btn.innerHTML = "Avise-me";
             }, 2000);
@@ -411,24 +415,46 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script>
         }
 
         function joiningTheCause(btn) {
-            var email = document.getElementById('contact-email').value;
-            if ( ! email || ! validateEmail(email)) {
-                document.getElementById("contact-email").style.borderColor = "red";
+            var name = field('contact', 'name').value.trim();
+            var email = field('contact', 'email').value.trim();
+            var subject = field('contact', 'subject').value.trim();
+            var message = field('contact', 'message').value.trim();
+
+            var valid = true;
+            if (!name) {
+                field('contact', 'name').style.borderColor = 'red';
+                valid = false;
+            }
+            if (!email || !validateEmail(email)) {
+                field('contact', 'email').style.borderColor = 'red';
+                valid = false;
+            }
+            if (!subject) {
+                field('contact', 'subject').style.borderColor = 'red';
+                valid = false;
+            }
+            if (!message) {
+                field('contact', 'message').style.borderColor = 'red';
+                valid = false;
+            }
+            if (!valid) {
                 return;
             }
-            document.getElementById("contact-email").style.borderColor = "#00000000";
-            var name = document.getElementById('contact-name').value;
-            var subject = document.getElementById('contact-subject').value;
-            var message = document.getElementById('contact-message').value;
-            document.getElementById('contact-email').value = '';
-            document.getElementById('contact-name').value = '';
-            document.getElementById('contact-subject').value = '';
-            document.getElementById('contact-message').value = '';
-            request(email, name, subject, message);
-            btn.innerHTML = "Pronto!";
 
+            field('contact', 'name').style.borderColor = '#00000000';
+            field('contact', 'email').style.borderColor = '#00000000';
+            field('contact', 'subject').style.borderColor = '#00000000';
+            field('contact', 'message').style.borderColor = '#00000000';
+            field('contact', 'name').value = '';
+            field('contact', 'email').value = '';
+            field('contact', 'subject').value = '';
+            field('contact', 'message').value = '';
+
+            request(email, name, subject, message);
+
+            btn.innerHTML = 'Pronto!';
             setTimeout(function () {
-                btn.innerHTML = "Enviar mensagem";
+                btn.innerHTML = 'Enviar mensagem';
             }, 2000);
         }
 
