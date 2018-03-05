@@ -1,0 +1,152 @@
+
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
+body {
+    font-family: 'Signika', sans-serif;    
+    background-color: #1b4855;    
+}
+.trees {    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    vertical-align: bottom;  
+}
+.card {
+  width: 100%;  
+  max-width: 700px;
+  margin-top: 60px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.1);
+}
+.logo {
+    margin-top: 30px;    
+    margin-bottom: 30px;
+}
+.logo img {
+    max-width: 170px;
+}
+p {
+    font-family: 'Signika', sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #074b57;
+}
+span {      
+  font-family: 'Signika', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1b4855;
+}
+.numbers {  
+  opacity: 0.6;
+  font-family: 'Signika', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #000000;
+}
+.facility-name {
+    font-family: 'Signika', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.75;
+    letter-spacing: -0.5px;
+    text-align: left;
+    color: #074b57;
+}
+.facility-address {  
+  opacity: 0.75;
+  font-family: 'Signika', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1b4855;
+}
+.btn-nav {  
+  width: 100%;  
+  padding: 5px;
+  text-align: center;  
+  cursor: pointer;
+  border-radius: 1px;
+  background-image: linear-gradient(158deg, #0197af, #074b56);
+}
+.btn-nav a {
+  font-family: 'Signika', sans-serif;
+  font-size: 14px;  
+  font-weight: normal;  
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  text-decoration: none;
+  letter-spacing: normal;    
+  text-align: left;
+  color: #ffffff;
+}
+.btn-nav img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+.types img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;    
+}
+#types {
+    min-height: 30px;
+}
+#footer {
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.title-footer {  
+  font-size: 16px;
+  font-weight: 600;  
+  color: #5dc91a;    
+  margin-top: 8px;
+  font-family: 'Signika', sans-serif;     
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.19;
+  letter-spacing: 0px;
+  text-align: center;  
+}
+.desc-footer {
+  font-size: 13px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: normal;    
+  font-family: 'Signika', sans-serif; 
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.46;
+  letter-spacing: 0px;
+  text-align: center;
+  color: #1b4855;
+}
+.btn-store {
+    width: 140px;
+}
