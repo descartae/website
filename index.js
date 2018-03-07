@@ -83,14 +83,3 @@ function loadFacilities(callback){
       }
     })
 }
-
-loadFacilities(function(err, facilities) {
-  console.log("First", facilities[0])
-})
-
-loadFacility(
-  "000000000000000000000002",
-  function(err, data){
-    console.log("Single", data)
-  }
-)
