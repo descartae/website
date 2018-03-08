@@ -53,15 +53,9 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script>
             <div class="mx-auto logo">
                 <img src="./img/logo/dark/image@3x.png" />
             </div>     
-            <div class="map">
-                <iframe
-                  width="100%"
-                  height="160px"
-                  frameborder="0" style="border:0"
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB6cbP4IPbh5tx4snjE1SPRHb-b9cOPOeU" allowfullscreen>
-                </iframe>
+            <div class="map" id="map">            
             </div>
-            <div class="container">
+            <div class="container mt-4">
                 <div class="row">
                     <div class="col-md">
                         <strong id="facility_name" class="facility-name">##########</strong>
@@ -157,6 +151,9 @@ mixpanel.init("7f7bf0d6ede631fea5d29f1362027aff");</script>
             mixpanel.track(key);
         }                
         
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6cbP4IPbh5tx4snjE1SPRHb-b9cOPOeU">
     </script>
 </body>
 </html>

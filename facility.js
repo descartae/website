@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadFacility(
       getQueryParams(document.location.search).id,
       function(err, data){
-          console.log("Single", data)
+          
           document.getElementById("facility_name").textContent = data.name;
           document.getElementById("facility_address").textContent = data.location.address + " - " + data.location.municipality + "/" + data.location.state;
         
@@ -86,9 +86,18 @@ document.addEventListener('DOMContentLoaded', function() {
               openHours += data.openHours[x].dayOfWeek + ": " + data.openHours[x].startTime + " - " + data.openHours[x].endTime + "\r\n";              
           }
           
-          document.getElementById("facility_openHours").textContent = openHours;
+            document.getElementById("facility_openHours").textContent = openHours;          
+            document.getElementById("facility_telephone").textContent = data.telephone;          
           
-          document.getElementById("facility_telephone").textContent = data.telephone;
+            var uluru = {lat: data.location.coordinates.latitude, lng: data.location.coordinates.longitude};          
+            var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 14,
+              center: uluru
+            });
+            var marker = new google.maps.Marker({
+              position: uluru,
+              map: map
+            });
       }
     )
 }, false);
