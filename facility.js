@@ -80,10 +80,11 @@ document.addEventListener('DOMContentLoaded', function() {
           document.getElementById("facility_name").textContent = data.name;
           document.getElementById("facility_address").textContent = data.location.address + " - " + data.location.municipality + "/" + data.location.state;
         
-          var openHours = "";
+          var week = {SUNDAY: "Domingo", MONDAY: "Segunda-Feira", TUESDAY: "Terça-Feira", WEDNESDAY: "Quarta-Feira", THURDASY: "Quinta-Feira", FRIDAY: "Sexta-Feira", SATURDAY: "Sábado"}
           
+          var openHours = "";                              
           for (x = 0; x < data.openHours.length; x++) {
-              openHours += data.openHours[x].dayOfWeek + ": " + data.openHours[x].startTime + " - " + data.openHours[x].endTime + "\r\n";              
+              openHours += week[data.openHours[x].dayOfWeek] + ": " + data.openHours[x].startTime + " - " + data.openHours[x].endTime + "\r\n";              
           }
           
             document.getElementById("facility_openHours").textContent = openHours;          
