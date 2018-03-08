@@ -116,7 +116,49 @@ span {
 #types {
     min-height: 30px;
 }
-#footer {
+@media (max-width: 770px) {
+    .footer {    
+       visibility: hidden;   
+       display: none;
+       opacity: 0;
+    }
+    .route {    
+       visibility: hidden;   
+       display: none;
+       opacity: 0;
+    }
+    .title-footer {  
+       text-align: center;  
+    }
+    .desc-footer {
+       text-align: center;  
+    }
+}
+@media (min-width: 770px) {
+    .mobile-footer {    
+       visibility: hidden;      
+       opacity: 0;
+       display: none;
+    }
+    .mobile-route {    
+       visibility: hidden;      
+       opacity: 0;
+       display: none;
+    }
+    .title-footer {  
+       text-align: left;  
+    }
+    .desc-footer {
+       text-align: left;  
+    }
+}
+.mobile-footer {
+    padding-left: 20px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.footer {
     padding-left: 20px;
     padding-right: 40px;
     padding-bottom: 20px;
@@ -131,8 +173,7 @@ span {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.19;
-  letter-spacing: 0px;
-  text-align: center;  
+  letter-spacing: 0px;  
 }
 .desc-footer {
   font-size: 13px;
@@ -143,8 +184,7 @@ span {
   font-style: normal;
   font-stretch: normal;
   line-height: 1.46;
-  letter-spacing: 0px;
-  text-align: center;
+  letter-spacing: 0px;  
   color: #1b4855;
 }
 .btn-store {
