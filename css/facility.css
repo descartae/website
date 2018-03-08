@@ -113,7 +113,7 @@ span {
     height: 25px;
     margin-right: 5px;    
 }
-#types {
+#facility_types {
     min-height: 30px;
 }
 @media (max-width: 770px) {

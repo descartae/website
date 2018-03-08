@@ -29,6 +29,9 @@ function loadFacility(id, callback){
           _id \
           name \
           color \
+          icons { \
+             iosMediumURL \
+          } \
         } \
         openHours { \
           dayOfWeek \
@@ -76,16 +79,26 @@ document.addEventListener('DOMContentLoaded', function() {
     loadFacility(
       getQueryParams(document.location.search).id,
       function(err, data){
+            
+            console.log(data)
           
-          document.getElementById("facility_name").textContent = data.name;
-          document.getElementById("facility_address").textContent = data.location.address + " - " + data.location.municipality + "/" + data.location.state;
-        
-          var week = {SUNDAY: "Domingo", MONDAY: "Segunda-Feira", TUESDAY: "Terça-Feira", WEDNESDAY: "Quarta-Feira", THURDASY: "Quinta-Feira", FRIDAY: "Sexta-Feira", SATURDAY: "Sábado"}
+            document.getElementById("facility_name").textContent = data.name;
+            document.getElementById("facility_address").textContent = data.location.address + " - " + data.location.municipality + "/" + data.location.state;
+
+            var week = {SUNDAY: "Domingo", MONDAY: "Segunda-Feira", TUESDAY: "Terça-Feira", WEDNESDAY: "Quarta-Feira", THURDASY: "Quinta-Feira", FRIDAY: "Sexta-Feira", SATURDAY: "Sábado"}
+
+            var openHours = "";                              
+            for (x = 0; x < data.openHours.length; x++) {
+                openHours += week[data.openHours[x].dayOfWeek] + ": " + data.openHours[x].startTime + " - " + data.openHours[x].endTime + "\r\n";              
+            }
+
+            var types = document.getElementById("facility_types");
           
-          var openHours = "";                              
-          for (x = 0; x < data.openHours.length; x++) {
-              openHours += week[data.openHours[x].dayOfWeek] + ": " + data.openHours[x].startTime + " - " + data.openHours[x].endTime + "\r\n";              
-          }
+            for (x = 0; x < data.typesOfWaste.length; x++) {            
+                var img = document.createElement("img");
+                img.src = data.typesOfWaste[x].icons.iosMediumURL;
+                types.appendChild(img);
+            }
           
             document.getElementById("facility_openHours").textContent = openHours;          
             document.getElementById("facility_telephone").textContent = data.telephone;          
@@ -97,7 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             var marker = new google.maps.Marker({
               position: uluru,
-              map: map
+              icon: "./img/ic-pin.svg",
+              map: map              
             });
       }
     )
