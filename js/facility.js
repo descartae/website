@@ -1,5 +1,3 @@
-require('whatwg-fetch')
-
 function runQuery(query, variables, callback) {
   fetch('https://beta-api.descartae.com/graphql', {
     method: 'POST',
@@ -11,9 +9,9 @@ function runQuery(query, variables, callback) {
   })
     .then(function(response) { return response.json() })
     .then(function(response) {
-        data = response.data
-        errors = response.errors
-        callback(errors, data)
+      const data = response.data
+      const errors = response.errors
+      callback(errors, data)
     })
 }
 
@@ -75,35 +73,32 @@ function getQueryParams(qs) {
     return params;
 }
 
-document.addEventListener('DOMContentLoaded', function() {           
+document.addEventListener('DOMContentLoaded', function() {
     loadFacility(
       getQueryParams(document.location.search).id,
       function(err, data){
-            
-            console.log(data)
-          
             document.getElementById("facility_name").textContent = data.name;
             document.getElementById("facility_address").textContent = data.location.address + " - " + data.location.municipality + "/" + data.location.state;
 
             var week = {SUNDAY: "Domingo", MONDAY: "Segunda-Feira", TUESDAY: "Terça-Feira", WEDNESDAY: "Quarta-Feira", THURDASY: "Quinta-Feira", FRIDAY: "Sexta-Feira", SATURDAY: "Sábado"}
 
-            var openHours = "";                              
-            for (x = 0; x < data.openHours.length; x++) {
-                openHours += week[data.openHours[x].dayOfWeek] + ": " + data.openHours[x].startTime + " - " + data.openHours[x].endTime + "\r\n";              
+            var openHours = "";
+            for (let x = 0; x < data.openHours.length; x++) {
+                openHours += week[data.openHours[x].dayOfWeek] + ": " + data.openHours[x].startTime + " - " + data.openHours[x].endTime + "\r\n";
             }
 
             var types = document.getElementById("facility_types");
-          
-            for (x = 0; x < data.typesOfWaste.length; x++) {            
+
+            for (let x = 0; x < data.typesOfWaste.length; x++) {
                 var img = document.createElement("img");
                 img.src = data.typesOfWaste[x].icons.iosMediumURL;
                 types.appendChild(img);
             }
-          
-            document.getElementById("facility_openHours").textContent = openHours;          
-            document.getElementById("facility_telephone").textContent = data.telephone;          
-          
-            var uluru = {lat: data.location.coordinates.latitude, lng: data.location.coordinates.longitude};          
+
+            document.getElementById("facility_openHours").textContent = openHours;
+            document.getElementById("facility_telephone").textContent = data.telephone;
+
+            var uluru = { lat: data.location.coordinates.latitude, lng: data.location.coordinates.longitude };
             var map = new google.maps.Map(document.getElementById('map'), {
               zoom: 14,
               center: uluru
@@ -111,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var marker = new google.maps.Marker({
               position: uluru,
               icon: "./img/ic-pin.svg",
-              map: map              
+              map: map
             });
       }
     )

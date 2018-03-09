@@ -3,17 +3,29 @@
   "version": "1.0.0",
   "main": "index.js",
   "repository": "git@github.com:descartae/website.git",
-  "author": "Herlon Aguiar <herlon214@gmail.com>",
+  "author": "Lucas Montano <lucasmontano@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "parcel --no-cache index.html",
-    "build": "rm -Rf dist/*; parcel build --public-url / index.html && cp -R mobile-assets dist/assets"
+    "start": "grunt",
+    "build": "grunt build"
   },
   "dependencies": {
     "bootstrap": "4.0.0-beta.2",
     "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.6.2"
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "grunt": "^1.0.2",
+    "grunt-babel": "^7.0.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-processhtml": "^0.4.1"
   }
 }

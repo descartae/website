@@ -1,5 +1,3 @@
-require('whatwg-fetch')
-
 function runQuery(query, variables, callback) {
   fetch('https://beta-api.descartae.com/graphql', {
     method: 'POST',
@@ -11,51 +9,10 @@ function runQuery(query, variables, callback) {
   })
     .then(function(response) { return response.json() })
     .then(function(response) {
-        data = response.data
-        errors = response.errors
-        callback(errors, data)
+      const data = response.data
+      const errors = response.errors
+      callback(errors, data)
     })
-}
-
-function loadFacility(id, callback){
-  var query = " \
-    query Facility ($id: ID!) { \
-      facility(_id: $id) { \
-        _id \
-        name \
-        website \
-        telephone \
-        typesOfWaste { \
-          _id \
-          name \
-          color \
-        } \
-        openHours { \
-          dayOfWeek \
-          startTime \
-          endTime \
-        } \
-        location { \
-          address \
-          municipality \
-          state \
-          zip \
-          coordinates { \
-            latitude \
-            longitude \
-          } \
-        } \
-      } \
-    } \
-  "
-
-  runQuery(query, { id }, function(err, data) {
-    if (data && data.facility) {
-      callback(err, data.facility)
-    } else {
-      callback(err)
-    }
-  })
 }
 
 function loadFacilities(callback){
