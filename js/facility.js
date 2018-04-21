@@ -15,6 +15,15 @@ function runQuery(query, variables, callback) {
     })
 }
 
+function route() {
+    var url = "https://www.google.com/maps/search/?api=1&query=";
+    var address = document.getElementById("facility_address").textContent;
+    if (address) {
+        var win = window.open(url + address, '_blank');
+        win.focus();
+    }
+}
+
 function loadFacility(id, callback){
   var query = " \
     query Facility ($id: ID!) { \
