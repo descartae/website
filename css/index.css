@@ -101,13 +101,16 @@ p {
 .ss-image {
   align-items: flex-end;
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  
 }
 .ss-image img {
   object-fit: contain;
   max-width:100%;
   max-height:100%;
-  margin-top: 10px;
+  margin-top: 10px;  
+}
+.download img {
+    height: 47px;
 }
 .types {
   padding-top: 63px;
@@ -115,6 +118,10 @@ p {
   background-color: #f6f6f6;
   margin: auto;
   text-align: center;
+}
+.types img {
+    width: 80px;
+    height: 80px;
 }
 .types-title {
   padding-left: 30px;
