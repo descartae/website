@@ -104,7 +104,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 types.appendChild(img);
             }
 
-            document.getElementById("facility_openHours").textContent = openHours;
+            if (openHours) {
+                document.getElementById("facility_openHours").textContent = openHours;
+                document.getElementById("facility_openHours_div").style.visibility = "block"
+            } else {
+                document.getElementById("facility_openHours_div").style.visibility = "hidden"
+            }
             document.getElementById("facility_telephone").textContent = data.telephone;
 
             var uluru = { lat: data.location.coordinates.latitude, lng: data.location.coordinates.longitude };

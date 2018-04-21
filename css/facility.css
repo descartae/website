@@ -12,9 +12,8 @@ body {
     vertical-align: bottom;  
 }
 .card {
-  width: 100%;  
-  max-width: 700px;
-  margin-top: 60px;
+  width: 100%;      
+  margin-top: 60px;      
   border-radius: 4px;
   background-color: #ffffff;
   box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.1);
@@ -59,6 +58,9 @@ span {
   letter-spacing: normal;
   text-align: left;
   color: #000000;
+}
+#facility_openHours_div {
+    visibility: hidden;
 }
 .facility-name {
     font-family: 'Signika', sans-serif;
