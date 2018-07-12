@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "org.descartae.android",
+    "sha256_cert_fingerprints":
+    ["48:86:E9:9C:34:37:A1:0B:9B:7E:4D:FD:20:14:9C:C2:1B:F4:81:D3:65:AD:B3:3C:FD:F6:28:90:A3:A1:0F:27"]
+  }
+}]
