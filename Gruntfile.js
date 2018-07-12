@@ -67,6 +67,14 @@ module.exports = function (grunt) {
             dest: 'dist/assets'
           },
         ]
+      },
+      misc: {
+        expand: true,
+        src: [
+          'googlef53629e00736ad78.html',
+          '.well-known/**'
+        ],
+        dest: 'dist/.',
       }
     },
 
@@ -128,5 +136,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-babel')
   grunt.loadNpmTasks('grunt-processhtml')
   grunt.registerTask('default', ['build', 'connect', 'watch'])
-  grunt.registerTask('build', ['babel', 'cssmin', 'processhtml', 'htmlmin', 'copy:images', 'copy:assets', 'clean'])
+  grunt.registerTask('build', ['babel', 'cssmin', 'processhtml', 'htmlmin', 'copy:images', 'copy:assets', 'copy:misc', 'clean'])
 }
