@@ -31,7 +31,8 @@ module.exports = function (grunt) {
         },
         files: {
           'dist/index.min.html': ['index.html'],
-          'dist/facility.min.html': ['facility.html']
+          'dist/facility.min.html': ['facility.html'],
+          'dist/facility/index.min.html': ['facility/index.html']
         }
       }
     },
@@ -43,7 +44,8 @@ module.exports = function (grunt) {
         },
         files: {
           'dist/index.html': 'dist/index.min.html',
-          'dist/facility.html': 'dist/facility.min.html'
+          'dist/facility.html': 'dist/facility.min.html',
+          'dist/facility/index.html': 'dist/facility/index.min.html'
         }
       }
     },
