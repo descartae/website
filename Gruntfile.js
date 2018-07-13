@@ -80,7 +80,7 @@ module.exports = function (grunt) {
       }
     },
 
-    clean: ['dist*//*.min.*'],
+    clean: ['dist/**/*.min.*'],
 
     connect: {
       server: {
